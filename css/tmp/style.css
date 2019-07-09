@@ -1,0 +1,299 @@
+@charset "UTF-8";
+/* ==============================
+    fonts, icons
+============================== */
+@import "https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css";
+@import "https://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css";
+/* ==============================
+    scss modules - global
+============================== */
+/* ==============================
+  4px grid system
+============================== */
+/* ==============================
+  4px grid system
+============================== */
+/* ==============================
+  media query breakpoints
+============================== */
+/* ==============================
+  browser specific
+============================== */
+/* ==============================
+  color stack
+============================== */
+/* ==============================
+  border radius
+============================== */
+/* ==============================
+    transition
+============================== */
+/* ==============================
+  transform
+============================== */
+/* ==============================
+  box-shadow
+============================== */
+/* ==============================
+  box-sizing
+============================== */
+/* ==============================
+    mixin default font
+============================== */
+/* ==============================
+    text rendering
+============================== */
+/* ==============================
+    default font-size, line-height
+============================== */
+/* ==============================
+    normalize css
+============================== */
+html {
+  margin: 0 auto;
+  max-width: 960px;
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: inherit;
+  -khtml-box-sizing: inherit;
+  -ms-box-sizing: inherit;
+  -o-box-sizing: inherit;
+  box-sizing: inherit; }
+  *::before, *::after {
+    -webkit-box-sizing: inherit;
+    -khtml-box-sizing: inherit;
+    -ms-box-sizing: inherit;
+    -o-box-sizing: inherit;
+    box-sizing: inherit; }
+
+body {
+  direction: ltr;
+  font-feature-settings: 'liga';
+  -moz-font-feature-settings: 'liga';
+  -webkit-font-feature-settings: 'liga';
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+  text-rendering: optimizeLegibility !important;
+  -webkit-text-decoration-skip: ink;
+  text-decoration-skip: ink;
+  font-family: 'Spoqa Han Sans', 'Apple SD Gothic Neo', 'SF Pro KR', 'SF Pro Display', 'Apple Gothic', 'Nanum Barun Gothic', 'Nanum Gothic', '돋움', 'Dotum', 'sans-serif';
+  -moz-font-family: 'Spoqa Han Sans', 'Apple SD Gothic Neo', 'SF Pro KR', 'SF Pro Display', 'Apple Gothic', 'Nanum Barun Gothic', 'Nanum Gothic', '돋움', 'Dotum', 'sans-serif';
+  -webkit-font-family: 'Spoqa Han Sans', 'Apple SD Gothic Neo', 'SF Pro KR', 'SF Pro Display', 'Apple Gothic', 'Nanum Barun Gothic', 'Nanum Gothic', '돋움', 'Dotum', 'sans-serif';
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 25.6px;
+  line-height: 1.6rem; }
+
+::-moz-selection {
+  background-color: transparent !important; }
+
+::selection {
+  background-color: transparent !important; }
+
+button {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
+  button:focus {
+    outline: none; }
+    button:focus::-ms-clear, button:focus::-ms-reveal {
+      display: none; }
+
+div {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
+
+/* ==============================
+    opacity
+============================== */
+/* ==============================
+    fonts
+============================== */
+body {
+  outline: none;
+  color: #333;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important; }
+
+a {
+  color: #17C060;
+  text-decoration: none;
+  -webkit-transition: color 0.25s ease;
+  transition: color 0.25s ease; }
+  a:hover {
+    color: #14A251; }
+
+h3 {
+  font-weight: 900;
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 51.2px;
+  line-height: 3.2rem; }
+
+p {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 25.6px;
+  line-height: 1.6rem; }
+  p b {
+    font-weight: 900; }
+
+/* ==============================
+    scale svg image only ie
+============================== */
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  img[src$=".svg"] {
+    width: 100%; } }
+
+/* ==============================
+    scss modules - components
+============================== */
+.accordion__container {
+  z-index: 1;
+  padding-top: 8px; }
+  .accordion__container .accordion__container--wrapper:nth-child(2n) .accordion__container--header,
+  .accordion__container .accordion__container--wrapper:nth-child(2n) .accordion__container--box {
+    background-color: #f4f4f4; }
+  .accordion__container .accordion__container--wrapper .accordion__container--header {
+    width: 100%;
+    border: none;
+    outline: none;
+    color: #333;
+    cursor: pointer;
+    text-align: left;
+    background-color: #fff;
+    padding: 20px 16px;
+    -webkit-transition: all 0.25s ease;
+    transition: all 0.25s ease; }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .accordion__container .accordion__container--wrapper .accordion__container--header {
+        margin-bottom: 0 !important; } }
+    @supports (-ms-ime-align: auto) {
+      .accordion__container .accordion__container--wrapper .accordion__container--header {
+        margin-bottom: 0 !important; } }
+    .accordion__container .accordion__container--wrapper .accordion__container--header:active {
+      border: none;
+      color: #333; }
+    .accordion__container .accordion__container--wrapper .accordion__container--header .accordion__container--icon {
+      float: left;
+      width: 32px; }
+      .accordion__container .accordion__container--wrapper .accordion__container--header .accordion__container--icon::after {
+        content: "\02795";
+        font-size: 12px;
+        font-size: 0.75rem;
+        line-height: 25.6px;
+        line-height: 1.6rem; }
+    .accordion__container .accordion__container--wrapper .accordion__container--header.active .accordion__container--icon::after {
+      content: "\2796"; }
+    .accordion__container .accordion__container--wrapper .accordion__container--header .accordion__container--title {
+      float: right;
+      font-weight: 900;
+      width: calc(100% - 32px);
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 25.6px;
+      line-height: 1.6rem; }
+      .accordion__container .accordion__container--wrapper .accordion__container--header .accordion__container--title .accordion__container--date {
+        color: #999;
+        font-weight: 400;
+        display: inline-block;
+        vertical-align: baseline;
+        font-size: 14px;
+        font-size: 0.875rem; }
+        .accordion__container .accordion__container--wrapper .accordion__container--header .accordion__container--title .accordion__container--date::before {
+          content: "\00a0"; }
+    .accordion__container .accordion__container--wrapper .accordion__container--header .accordion__container--icon {
+      float: left;
+      width: 32px; }
+      .accordion__container .accordion__container--wrapper .accordion__container--header .accordion__container--icon::after {
+        color: #ccc;
+        content: "\02795";
+        font-size: 12px;
+        font-size: 0.75rem; }
+  .accordion__container .accordion__container--wrapper .accordion__container--box {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 16px;
+    background-color: #fff;
+    -webkit-transition: max-height 0.25s ease;
+    transition: max-height 0.25s ease; }
+    @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+      .accordion__container .accordion__container--wrapper .accordion__container--box {
+        margin-top: 0 !important; } }
+    @supports (-ms-ime-align: auto) {
+      .accordion__container .accordion__container--wrapper .accordion__container--box {
+        margin-top: 0 !important; } }
+    .accordion__container .accordion__container--wrapper .accordion__container--box .accordion__container--text {
+      padding: 0 0 32px;
+      font-size: 16px;
+      font-size: 1rem;
+      line-height: 25.6px;
+      line-height: 1.6rem; }
+
+.pagination__container {
+  margin: 16px auto; }
+  .pagination__container .pagination__container--body {
+    left: 50%;
+    position: absolute;
+    margin-right: -50%;
+    display: inline-block;
+    padding-bottom: 16px;
+    -webkit-transform: translateX(-50%);
+    -khtml-transform: translateX(-50%);
+    transform: translateX(-50%); }
+    .pagination__container .pagination__container--body .pagination__container--number {
+      float: left;
+      color: #333;
+      text-decoration: none;
+      padding: 8px 16px;
+      -webkit-border-radius: 4px;
+      -moz-border-radius: 4px;
+      border-radius: 4px; }
+      .pagination__container .pagination__container--body .pagination__container--number.active {
+        color: #fff;
+        font-weight: 900;
+        background-color: #17C060; }
+      .pagination__container .pagination__container--body .pagination__container--number:hover:not(.active) {
+        background-color: #f4f4f4; }
+
+.copyright__container {
+  width: 100%;
+  padding: 0 16px; }
+  .copyright__container .copyright__container--body {
+    margin-top: 96px;
+    margin-bottom: 32px; }
+    .copyright__container .copyright__container--body .copyright__container--text {
+      color: #999;
+      font-size: 12px;
+      font-size: 0.75rem;
+      line-height: 19.2px;
+      line-height: 1.2rem; }
+      .copyright__container .copyright__container--body .copyright__container--text::before {
+        content: "© "; }
+      .copyright__container .copyright__container--body .copyright__container--text::after {
+        content: ". 타이트 주식회사. Tite, Ltd., All Rights Reserved."; }
+
+[ripple] .ripple--container span {
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  border-radius: 100%;
+  position: absolute;
+  opacity: 0.78;
+  background-color: rgba(0, 0, 0, 0.08);
+  -webkit-animation: ripple 1000ms;
+  animation: ripple 1000ms; }
+
+@-webkit-keyframes ripple {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(2);
+    transform: scale(2); } }
+
+@keyframes ripple {
+  to {
+    opacity: 0;
+    -webkit-transform: scale(2);
+    transform: scale(2); } }

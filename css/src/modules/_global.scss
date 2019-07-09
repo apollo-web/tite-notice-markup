@@ -1,0 +1,151 @@
+/* ==============================
+    mixin default font
+============================== */
+@mixin font-stack-html() {
+            font-family: 'Spoqa Han Sans', 'Apple SD Gothic Neo', 'SF Pro KR', 'SF Pro Display', 'Apple Gothic', 'Nanum Barun Gothic', 'Nanum Gothic', '돋움', 'Dotum', 'sans-serif';
+       -moz-font-family: 'Spoqa Han Sans', 'Apple SD Gothic Neo', 'SF Pro KR', 'SF Pro Display', 'Apple Gothic', 'Nanum Barun Gothic', 'Nanum Gothic', '돋움', 'Dotum', 'sans-serif';
+    -webkit-font-family: 'Spoqa Han Sans', 'Apple SD Gothic Neo', 'SF Pro KR', 'SF Pro Display', 'Apple Gothic', 'Nanum Barun Gothic', 'Nanum Gothic', '돋움', 'Dotum', 'sans-serif';
+}
+
+
+/* ==============================
+    text rendering
+============================== */
+@mixin font-settings() {
+    direction: ltr;
+            font-feature-settings: 'liga';
+       -moz-font-feature-settings: 'liga';
+    -webkit-font-feature-settings: 'liga';
+    -moz-osx-font-smoothing: grayscale !important;
+     -webkit-font-smoothing: antialiased !important;
+            text-rendering:  optimizeLegibility !important;
+    -webkit-text-decoration-skip: ink;
+            text-decoration-skip: ink;
+}
+
+
+/* ==============================
+    default font-size, line-height
+============================== */
+@function calculateRem($size) {
+    $remSize: $size / $grid4x;
+    @return $remSize * 1rem;
+}
+@mixin font-size($size) {
+    font-size: $size;
+    font-size: calculateRem($size);
+}
+@mixin line-height($size) {
+    line-height: $size * 1.6;
+    line-height: calculateRem($size) * 1.6;
+}
+
+
+/* ==============================
+    normalize css
+============================== */
+html {
+    margin: 0 auto;
+    max-width: 960px;
+    @include box-sizing(border-box);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    @include box-sizing(inherit);
+    
+    &::before,
+    &::after {
+        @include box-sizing(inherit);
+    }
+}
+
+body {
+    @include font-settings();
+    @include font-stack-html();
+    @include font-size($grid4x);
+    @include line-height($grid4x);
+}
+
+::-moz-selection {
+    // color: white;
+    background-color: transparent !important;
+}
+
+::selection {
+    // color: white;
+    background-color: transparent !important;
+}
+
+button {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+    
+    &:focus {
+        outline: none;
+    
+        &::-ms-clear,
+        &::-ms-reveal {
+            display: none;
+        }
+    }
+}
+
+div {
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+
+/* ==============================
+    opacity
+============================== */
+@mixin opacity($opacity) {
+    opacity: $opacity;
+    $opacity-ie: $opacity * 100;
+    filter: alpha(opacity=$opacity-ie);
+}
+
+
+/* ==============================
+    fonts
+============================== */
+body {
+    outline: none;
+    color: $text333;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0) !important;
+}
+
+a {
+    color: $brand;
+    text-decoration: none;
+    @include transition(color .25s ease);
+  
+    &:hover {
+        color: $brand-hover;
+    }
+}
+
+h3 {
+    font-weight: 900;
+    @include font-size($grid6x);
+    @include line-height($grid8x);
+}
+
+p {
+    @include font-size($grid4x);
+    @include line-height($grid4x);
+
+    b {
+        font-weight: 900;
+    }
+}
+
+
+/* ==============================
+    scale svg image only ie
+============================== */
+@media #{$ie} {
+    img[src$=".svg"] {
+      width: 100%;
+    }
+}

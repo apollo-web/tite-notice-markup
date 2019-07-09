@@ -1,0 +1,50 @@
+/* ==============================
+  border radius
+============================== */
+@mixin border-radius      ($val:$grid) {
+    -webkit-border-radius: $val;
+    -moz-border-radius:    $val;
+    border-radius:         $val;
+}
+
+
+/* ==============================
+    transition
+============================== */
+@mixin transition      ($transition...) {
+    -webkit-transition: $transition;
+    transition:         $transition;
+}
+
+
+/* ==============================
+  transform
+============================== */
+@mixin transform      ($val){
+    -webkit-transform: $val;
+    -khtml-transform:  $val;
+    transform:         $val;
+}
+
+
+/* ==============================
+  box-shadow
+============================== */
+@mixin box-shadow         ($val:2px, $val2:$grid, $color:$black16){
+    -webkit-box-shadow:  0 $val $val2 $color;
+    -ms-box-shadow:      0 $val $val2 $color;
+    -o-box-shadow:       0 $val $val2 $color;
+    box-shadow:          0 $val $val2 $color;
+}
+
+
+/* ==============================
+  box-sizing
+============================== */
+@mixin box-sizing      ($val:border-box){
+    -webkit-box-sizing: $val;
+    -khtml-box-sizing:  $val;
+    -ms-box-sizing:     $val;
+    -o-box-sizing:      $val;
+    box-sizing:         $val;
+}
